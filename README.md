@@ -1,4 +1,7 @@
-# 04-Web-APIs-Personal-Blog
+# my-blog 
+
+## Web APIs Personal Blog
+
 This project utilizes JavaScript and Document Object Model (DOM) to create a two-page website where users can input and view blog posts. It includes a content form, dynamically rendering blog posts, and implementing a light/dark mode toggle.
 
 ## User Story
@@ -49,6 +52,10 @@ THEN I am presented with a link to the developer's portfolio.
 ```
 
 ## Screenshot
+(Coming soon...)
 
 ## Link to the deployed web app
 
+To visit my web app, please click the following link: https://ngojohn2002.github.io/my-blog/  
+
+&copy; 2024 - All rights reserved.
