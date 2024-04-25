@@ -1,65 +1,54 @@
-const userName = document.getElementById(`user-name`);
-const title = document.getElementById(`title`);
-const content = document.getElementById(`content`);
+const userNameInput = document.getElementById(`user-name`);
+const titleInput = document.getElementById(`title`);
+const contentInput = document.getElementById(`content`);
 const submitBtn = document.getElementById(`submit`);
 
-function saveBlogger() {
+const bloggers = [];
+
+function saveBloggers() {
+  // Validate inputs and prompt user to complete form
+  if (userNameInput === "" || titleInput === "" || contentInput === "") {
+    alert(`Please complete the form.`);
+    return;
+  }
+
   // Save related form data to a blog object
   const blogger = {
-    userName: userName.value.trim(),
-    title: title.value.trim(),
-    content: content.value.trim(),
+    userName: userNameInput.value.trim(),
+    title: titleInput.value.trim(),
+    content: contentInput.value.trim(),
   };
+
+  // Add new blogger object to bloggers array
+  bloggers.push(blogger);
+  console.log(bloggers);
   // Use .setItem() to store object in storage and JSON.stringify to convert it as a string
-  localStorage.setItem(`blogger`, JSON.stringify(blogger));
+  localStorage.setItem(`bloggers`, JSON.stringify(bloggers));
 }
 
 function renderBlogger() {
-  // Use JSON.parse() to convert text to JavaScript object
-  const blogger = JSON.parse(localStorage.getItem(`blogger`));
   // Check if data is returned, if not exit out of the function
-  if (blogger !== null) {
-    ///////
-    //document.getElementById
+  if (bloggers !== null) {
+    // Use JSON.parse() to convert text to JavaScript object
+    //bloggers = JSON.parse(localStorage.getItem(`bloggers`));
+    
+    
   }
 }
 
-submitBtn.addEventListener(`click`, function(event){
-    event.preventDefault;
-    saveBlogger();
-    renderBlogger();
+submitBtn.addEventListener(`click`, function (event) {
+  event.preventDefault();
+
+  saveBloggers();
+  //renderBlogger();
 });
 
 // The init() function fires when the page is loaded
 function init() {
+  //saveBloggers();
+
   // When the init function is executed, the code inside renderBlogger function will also execute
-  renderBlogger();
+  //renderBlogger();
 }
 
 init();
-
-
-/* 
-let nameEl = document.querySelector(`#user-name`);
-let nameBackgroundColor = nameEl.style.backgroundColor;
-let titleEl = document.querySelector(`#title`);
-let titleBackgroundColor = titleEl.style.backgroundColor;
-let txtAreaEl = document.querySelector(`#content`);
-let txtAreaBackgroundColor = txtAreaEl.style.backgroundColor;
-
-nameEl.addEventListener("mouseover", function () {
-  if (nameBackgroundColor == `black`) {
-    nameEl.style.backgroundColor = `white`;
-  } else {
-    nameEl.style.backgroundColor = `black`;
-  }
-});
-
-nameEl.addEventListener("mouseout", function () {
-  if (nameBackgroundColor == `black`) {
-    nameEl.style.backgroundColor = `white`;
-  } else {
-    nameEl.style.backgroundColor = `black`;
-  }
-}); 
-*/

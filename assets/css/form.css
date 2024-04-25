@@ -137,12 +137,7 @@ button {
   background-color: black;
   color: white;
 }
-/*
-input:hover,
-textarea:hover {
-  background-color: white;
-}
-*/
+
 .btn-dark-mode {
   background-color: white;
   color: black;
@@ -153,6 +148,13 @@ textarea:hover {
   float: right;
   text-align: center;
 }
+
+/*
+input:hover,
+textarea:hover {
+  background-color: white;
+}
+*/
 
 @media screen and (max-width: 1000px) {
   .card {
