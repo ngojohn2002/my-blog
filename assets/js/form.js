@@ -5,34 +5,43 @@ function toggleDarkLightMode() {
   let top = document.querySelector(`.top`);
   top.classList.toggle("dark-mode");
 
-  let modeBtn = document.querySelector(`#mode`);
-  console.log(modeBtn);
-  modeBtn.classList.toggle("dark-mode");
-
-  let submitBtn = document.querySelector(`#submit`);
-  console.log(modeBtn);
-  submitBtn.classList.toggle("dark-mode");
-
   let left = document.querySelector(`.left`);
   left.classList.toggle("dark-mode");
 
   let right = document.querySelector(`.right`);
   right.classList.toggle("dark-mode");
 
-  let userInputLabel = document.querySelector(`.user-input > label`);
-  userInputLabel.classList.toggle("dark-mode");
-  let userInputText = document.querySelector(`.user-input > input`);
-  userInputText.classList.toggle("dark-mode");
+  let userLabel = document.querySelector(`#user-label`);
+  userLabel.classList.toggle("dark-mode");
+  let userName = document.querySelector(`#user-name`);
+  userName.classList.toggle("dark-mode");
 
-  let titleInputLabel = document.querySelector(`.title-input > label`);
-  titleInputLabel.classList.toggle("dark-mode");
-  let titleInputText = document.querySelector(`.title-input > input`);
-  titleInputText.classList.toggle("dark-mode");
+  let titleLabel = document.querySelector(`#title-label`);
+  titleLabel.classList.toggle("dark-mode");
+  let title = document.querySelector(`#title`);
+  title.classList.toggle("dark-mode");
 
-  let contentInputLabel = document.querySelector(`.content-input > label`);
-  contentInputLabel.classList.toggle("dark-mode");
-  let contentInputArea = document.querySelector(`.content-input > textarea`);
-  contentInputArea.classList.toggle("dark-mode");
+  let contentLabel = document.querySelector(`#content-label`);
+  contentLabel.classList.toggle("dark-mode");
+  let content = document.querySelector(`#content`);
+  content.classList.toggle("dark-mode");
+
+  let modeBtn = document.querySelector(`#mode`);
+  modeBtn.classList.toggle("btn-dark-mode");
+
+  let submitBtn = document.querySelector(`#submit`);
+  submitBtn.classList.toggle("btn-dark-mode");
+
+  /*
+  var t = document.querySelector("textarea");
+  var d = t.parentNode;
+  t.addEventListener("mouseover", function () {
+    d.className += " textarea_hover";
+  });
+  t.addEventListener("mouseout", function () {
+    d.className = d.className.replace(/ textarea_hover/g, "");
+  });
+  */
 
   /*
   let mode = document.getElementById(`mode`);
