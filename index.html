@@ -1,1 +1,74 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/form.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Blog Home</title>
+  </head>
+  <body>
+    <div class="clearfix switch-btn" theme="light" id="switch-theme">
+      <div class="card top">
+        <button onclick="toggleDarkLightMode()" class="dark-mode" id="mode">
+          Dark/Light
+        </button>
+      </div>
+      <div class="card bottom left">
+        <iframe
+          src="https://giphy.com/embed/PgRsEC3YowPSBtMqGQ"
+          width="480"
+          height="480"
+          frameborder="0"
+          class="giphy-embed"
+          allowfullscreen
+        ></iframe>
+        <p>
+          <a
+            href="https://giphy.com/stickers/blogger-blogging-food-pro-PgRsEC3YowPSBtMqGQ"
+            >via GIPHY</a
+          >
+        </p>
+      </div>
+      <div class="card bottom right">
+        <h2>What's on your mind?</h2>
+        <form method="post">
+          <div class="input-group user-input">
+            <label for="user-name">User Name:</label>
+            <input
+              type="text"
+              name="user-name"
+              id="user-name"
+              placeholder="user name"
+            />
+          </div>
+          <div class="input-group title-input">
+            <label for="title">Title:</label>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              placeholder="blog's title"
+            />
+          </div>
+          <div class="input-group content-input">
+            <label for="content">Content:</label>
+            <textarea
+              name="content"
+              id="content"
+              placeholder="blog content"
+            ></textarea>
+          </div>
+          <button
+            onclick="location.href=`./blog.html`"
+            id="submit"
+            type="button"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="./assets/js/form.js"></script>
+  </body>
+</html>
