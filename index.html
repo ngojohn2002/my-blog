@@ -33,8 +33,8 @@
       <div class="card bottom right">
         <h2>What's on your mind?</h2>
         <form method="post">
-          <div class="input-group user-input">
-            <label for="user-name">User Name:</label>
+          <div class="input-group" theme="dark">
+            <label for="user-name" id="user-label">User Name:</label>
             <input
               type="text"
               name="user-name"
@@ -43,7 +43,7 @@
             />
           </div>
           <div class="input-group title-input">
-            <label for="title">Title:</label>
+            <label for="title" id="title-label">Title:</label>
             <input
               type="text"
               name="title"
@@ -52,7 +52,7 @@
             />
           </div>
           <div class="input-group content-input">
-            <label for="content">Content:</label>
+            <label for="content" id="content-label">Content:</label>
             <textarea
               name="content"
               id="content"
@@ -70,5 +70,6 @@
       </div>
     </div>
     <script src="./assets/js/form.js"></script>
+    <script src="./assets/js/logic.js"></script>
   </body>
 </html>
